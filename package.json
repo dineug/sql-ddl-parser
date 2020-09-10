@@ -1,0 +1,44 @@
+{
+  "name": "@dineug/sql-ddl-parser",
+  "version": "0.1.0",
+  "description": "Permissive SQL DDL Parser",
+  "main": "dist/sql-ddl-parser.js",
+  "module": "dist/sql-ddl-parser.esm.js",
+  "browser": "dist/sql-ddl-parser.min.js",
+  "typings": "./types/index.d.ts",
+  "files": [
+    "dist/*.js",
+    "types"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint . --ext .ts",
+    "test": "jest src/SQLParser.spec.ts"
+  },
+  "author": "dineug <dineug2@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@types/jest": "^26.0.13",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "codecov": "^3.7.2",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.1",
+    "rollup": "^2.26.11",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {}
+}
