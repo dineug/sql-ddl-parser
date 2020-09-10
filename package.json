@@ -10,6 +10,13 @@
     "dist/*.js",
     "types"
   ],
+  "keywords": [
+    "parser",
+    "sql",
+    "sql ddl",
+    "db",
+    "database"
+  ],
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint . --ext .ts",
