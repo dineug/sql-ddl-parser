@@ -1,6 +1,6 @@
 {
   "name": "@dineug/sql-ddl-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Permissive SQL DDL Parser",
   "main": "dist/sql-ddl-parser.js",
   "module": "dist/sql-ddl-parser.esm.js",
@@ -17,6 +17,14 @@
     "db",
     "database"
   ],
+  "homepage": "https://github.com/dineug/sql-ddl-parser",
+  "bugs": {
+    "url": "https://github.com/dineug/sql-ddl-parser/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dineug/sql-ddl-parser.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint . --ext .ts",
