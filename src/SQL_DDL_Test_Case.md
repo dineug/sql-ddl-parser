@@ -78,6 +78,7 @@
   > text
   > time
   > tinyint
+  > uniqueidentifier
   > varbinary
   > varchar
   > xml
