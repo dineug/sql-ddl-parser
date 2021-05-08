@@ -28,7 +28,8 @@ export const tokenMatch = {
   singleQuote: `'`,
   backtick: "`",
   keywords: getKeywords(),
-  string: /[a-z0-9_]/i,
+  // number, english, korean, chinese, japanese
+  string: /[a-z0-9_\u3131-\u314E\u314F-\u3163\uAC00-\uD7A3\u3040-\u309F\u30A0-\u30FF\u3400-\u4DB5\u4E00-\u9FCC]/i,
   unknown: /.+/,
   dataTypes: getDataTypes(),
 };
