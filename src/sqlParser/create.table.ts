@@ -30,6 +30,7 @@ import {
   isComma,
   isCurrent,
   isKeyword,
+  isUnknown,
 } from "./SQLParserHelper";
 
 export function createTable(tokens: Token[]): CreateTable {
@@ -58,7 +59,6 @@ export function createTable(tokens: Token[]): CreateTable {
       ast.foreignKeys = foreignKeys;
       continue;
     }
-
     if (isString(token) && !ast.name) {
       ast.name = token.value;
 
@@ -74,6 +74,8 @@ export function createTable(tokens: Token[]): CreateTable {
       }
 
       continue;
+    } else if (isUnknown(token)) {
+      ast.name = token.value;
     }
 
     if (isComment(token)) {

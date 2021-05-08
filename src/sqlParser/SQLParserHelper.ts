@@ -90,6 +90,11 @@ export function isString(token?: Token): boolean {
   return token.type === "string";
 }
 
+export function isUnknown(token?: Token): boolean {
+  if (!token) return false;
+  return token.type === "unknown";
+}
+
 export function isPeriod(token?: Token): boolean {
   if (!token) return false;
   return token.type === "period";

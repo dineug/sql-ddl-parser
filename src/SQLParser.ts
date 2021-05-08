@@ -188,7 +188,6 @@ export function parser(tokens: Token[]): Statement[] {
 
   while (current < tokens.length) {
     let token = tokens[current];
-
     if (isNewStatement(token)) {
       const statement: Token[] = [];
 
@@ -213,7 +212,6 @@ export function parser(tokens: Token[]): Statement[] {
 
     current++;
   }
-
   tokenStatements.forEach((tokenStatement) => {
     if (isCreateTable(tokenStatement)) {
       statements.push(createTable(tokenStatement));

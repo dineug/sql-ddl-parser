@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { tokenizer, parser } from "@src/SQLParser";
+import { tokenizer, parser,DDLParser } from "@src/SQLParser";
 
 type TestCase = [string, string, string];
 const testCaseList: Array<TestCase> = [];
@@ -33,4 +33,24 @@ it.each(testCaseList)("%s", (_, sql, json) => {
   const tokens = tokenizer(sql);
   const statements = parser(tokens);
   expect(json).toEqual({ statements });
+});
+
+test('test', () => {
+  const ddl = 'CREATE TABLE 主表\n' +
+    '(\n' +
+    '  id         int NOT NULL,\n' +
+    '  name_id    int NULL    ,\n' +
+    '  student_id int NULL    ,\n' +
+    '  name_id    int NOT NULL,\n' +
+    '  student_id int NOT NULL,\n' +
+    '  PRIMARY KEY (id)\n' +
+    ') COMMENT \'嗯\';\n' +
+    '\n' +
+    'CREATE TABLE 人物表\n' +
+    '(\n' +
+    '  name_id int NOT NULL,\n' +
+    '  PRIMARY KEY (name_id)\n' +
+    ');'
+  const result = DDLParser(ddl);
+  console.log(result);
 });
